@@ -3,7 +3,7 @@ from tradeSystem import *
 # create a trade system object
 tSys = tradeSystem()
 
-tSys.ticList = ["CL","PG","PHM","TSN"]
+tSys.ticList = ["XLE"]
 
 # get last 10 years of daily stock data
 #tSys.daGoogleCSV()

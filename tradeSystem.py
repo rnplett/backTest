@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import datetime
 from pandas import DataFrame
 import sys
-from settings import *
+from inputs.settings import *
 import quandl
 
 
@@ -410,7 +410,7 @@ class tradeSystem(object):
         self.trades['profit'] = self.trades['y2'] - self.trades['y1']
         self.trades['profPct'] = 100*self.trades['profit']/self.trades['y1']
         print("\nSummary of Trades by Percent Return for full test\n============================================\n")
-        print(self.trades[s.startswith('price') for s in self.trades.sym].pivot(columns='sym',values='profPct').describe())
+        #print(self.trades[s.startswith('price') for s in self.trades.sym].pivot(columns='sym',values='profPct').describe())
 
         #summarize the profits by symbol and period
         self.trades['periodBin'] = self.trades['x2']/period
